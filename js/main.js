@@ -28,6 +28,7 @@ const searchStates = async searchText => {
         matchList.innerHTML = '';
     }
 
+
     // lets output out matches to the html
     outputHtml(matches);
 };
@@ -38,6 +39,7 @@ const outputHtml = matches => {
         const html = matches.map(match => `
         <div class="card card-body mb-1">
             <span class="text-primary"><h4>${match.title}</h4></span><br></h4>
+            <img class="poster" src="${match.poster}">
             <small><h6>About:</h6><br> ${match.description}</small>
         </div>
         `).join('');

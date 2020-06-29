@@ -22,7 +22,7 @@ const searchStates = async searchText => {
         // return array that matches input
         return state.title.match(regex) || state.episode_number.match(regex);
     });
-    // lets prevent all 50 states from showing up once you delete letters/words
+    // lets prevent all movies from showing up once you delete letters/words
     if (searchText.length === 0) {
         matches = [];
         matchList.innerHTML = '';

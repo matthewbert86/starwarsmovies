@@ -37,10 +37,19 @@ const outputHtml = matches => {
     if (matches.length > 0) {
         // .map() returns an array from an array
         const html = matches.map(match => `
-        <div class="card card-body mb-1">
-            <span class="text-primary"><h4>${match.title}</h4></span><br></h4>
-            <img class="poster" src="${match.poster}">
-            <small><h6>About:</h6><br> ${match.description}</small>
+        <div class="card">
+            <div class="container">    
+                <div class="mainRow">
+                <span class="text-primary"><h2>${match.title}</h2></span><br></h4>
+                    <div class="left-div">
+                        <img class="poster" src="${match.poster}">
+                    </div>
+                    <div class="right-div">
+                        <h5 class="about">About:</h5>
+                         ${match.description}
+                    </div>
+                </div>
+            </div>
         </div>
         `).join('');
         //.join('') turns the array into a string, and it returns the html
